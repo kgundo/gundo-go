@@ -2,7 +2,7 @@
 
 0: Make Project (Not necessary. I'd done)
 
-go mod init github.com/kgundo/go-first
+go mod init github.com/kgundo/gundo-go
 
 1: get gin
 
