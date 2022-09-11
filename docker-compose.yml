@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+    gundo-go-db:
+        image: mysql:8
+        command: --default-authentication-plugin=mysql_native_password --log-bin-trust-function-creators=1
+        container_name: gundo-go-db
+        networks:
+            - api-network
+        ports:
+            - '33061:3306'
+        volumes:
+            - ./data_dir:/var/lib/mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: tiger
+            MYSQL_DATABASE: gundo-go
+            MYSQL_USER: gundo
+            MYSQL_PASSWORD: tigers
+
+volumes:
+    elasticsearch-data:
+        driver: local
+
+networks:
+    api-network:
+        driver: bridge
