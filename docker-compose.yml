@@ -8,14 +8,14 @@ services:
         networks:
             - api-network
         ports:
-            - '33061:3306'
+            - '3306:3306'
         volumes:
             - ./data_dir:/var/lib/mysql
         environment:
-            MYSQL_ROOT_PASSWORD: tiger
+            MYSQL_ROOT_PASSWORD: rootpassword
             MYSQL_DATABASE: gundo-go
-            MYSQL_USER: gundo
-            MYSQL_PASSWORD: tigers
+            MYSQL_USER: user
+            MYSQL_PASSWORD: password
 
 volumes:
     elasticsearch-data:
