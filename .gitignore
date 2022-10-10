@@ -16,3 +16,5 @@
 
 data_dir
 .DS_Store
+
+.env
